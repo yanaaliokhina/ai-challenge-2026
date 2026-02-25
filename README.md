@@ -105,6 +105,28 @@ pytest tests/ -s
 > See each day's `usage_examples.md` for day-specific test commands and notes.
 
 
+# 🤖 Claude Integration
+
+This project includes Claude commands that automate the challenge workflow.
+
+## Slash Commands
+
+| Command | Description |
+|---|---|
+| `/generate-next-challenge` | Reads README.md, detects the next incomplete day, and generates `instructions.md` + `usage_examples.md` |
+| `/implement-challenge` | Implements the latest generated challenge, runs tests, and marks it as ✅ DONE in README.md if they pass |
+
+## Workflow
+
+```
+/generate-next-challenge
+       ↓
+/implement-challenge
+```
+
+Each command is context-aware: it reads README.md to detect which day to act on and enforces the project's tech stack and scope rules automatically.
+
+
 # 📅 The 30 Independent Challenges
 
 ## Week 1 – LLM & Prompt Basics

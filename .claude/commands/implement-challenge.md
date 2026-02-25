@@ -37,11 +37,12 @@ You MUST NOT:
 - Modify other challenges
 
 ----------------------------------
-STEP 3 — Implement Based on instructions.md
+STEP 3 — Analyse Requirements and Implement Based on instructions.md
 ----------------------------------
 
 - Carefully read instructions.md
-- Extract functional requirements
+- Extract ALL functional requirements
+- Identify every distinct behaviour, edge case, and failure mode
 - Implement the solution inside:
 
     day-{NN}/src/
@@ -66,10 +67,19 @@ Follow STRICT rules:
 STEP 4 — Testing
 ----------------------------------
 
-If appropriate:
-- Add pytest tests
-- Mock LLM API calls
-- Keep tests deterministic
+Create day-{NN}/tests/ and write pytest tests.
+
+Rules:
+- One test file per logical module (e.g. tests/test_parser.py, tests/test_client.py)
+- Cover every requirement identified in Step 3:
+    - Happy-path cases
+    - Edge cases (empty input, boundary values, max/min)
+    - Error / exception cases
+    - Integration-level cases where relevant
+- Mock ALL external calls (LLM APIs, HTTP, file I/O where needed)
+- Keep tests deterministic — no randomness, no real network calls
+- Use descriptive test names: test_<unit>_<scenario>_<expected_result>
+- Every test must have a one-line docstring stating what it verifies
 
 ----------------------------------
 STEP 5 — Create or Update usage_examples.md
