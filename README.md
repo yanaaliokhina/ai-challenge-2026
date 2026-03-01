@@ -136,7 +136,7 @@ Each command is context-aware: it reads README.md to detect which day to act on 
 - AI Focus: Making LLM API calls
 - Deliverable: CLI script that sends a prompt and prints a response
 
-### Day 2 – Prompt Template Engine
+### Day 2 – Prompt Template Engine ✅ DONE
 - Python Focus: Class design, validation
 - AI Focus: Prompt engineering basics
 

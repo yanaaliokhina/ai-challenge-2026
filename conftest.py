@@ -9,6 +9,7 @@ def pytest_configure(config):
     # Running pytest from inside a day-NN folder (most common case)
     if cwd.name.startswith("day-") and cwd.parent == root:
         _add(str(cwd))
+        _add(str(cwd / "src"))
         return
 
     # Running pytest from the project root with explicit day-NN paths
@@ -17,6 +18,7 @@ def pytest_configure(config):
         for parent in [arg_path, *arg_path.parents]:
             if parent.name.startswith("day-") and parent.parent == root:
                 _add(str(parent))
+                _add(str(parent / "src"))
                 break
 
 
