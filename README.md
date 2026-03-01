@@ -140,7 +140,7 @@ Each command is context-aware: it reads README.md to detect which day to act on 
 - Python Focus: Class design, validation
 - AI Focus: Prompt engineering basics
 
-### Day 3 – Structured Outputs with Pydantic
+### Day 3 – Structured Outputs with Pydantic ✅ DONE
 - Python Focus: Pydantic models
 - AI Focus: JSON output validation
 
