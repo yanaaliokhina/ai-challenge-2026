@@ -8,6 +8,14 @@ You are responsible for implementing the latest generated challenge.
 Follow these steps STRICTLY.
 
 ----------------------------------
+AVAILABLE SKILLS
+----------------------------------
+
+Before implementing, check for active Claude skills in .claude/skills/.
+If a skill matches the scaffolding needs of this challenge,
+invoke it automatically — do not duplicate what the skill already provides.
+
+----------------------------------
 STEP 1 — Detect Latest Challenge
 ----------------------------------
 
@@ -43,6 +51,9 @@ STEP 3 — Analyse Requirements and Implement Based on instructions.md
 - Carefully read instructions.md
 - Extract ALL functional requirements
 - Identify every distinct behaviour, edge case, and failure mode
+- Before writing any boilerplate, check .claude/skills/ for a matching skill.
+  If project-scaffold or another relevant skill exists, invoke it to generate
+  the base structure, then layer challenge-specific logic on top.
 - Implement the solution inside:
 
     day-{NN}/src/

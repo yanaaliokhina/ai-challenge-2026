@@ -116,12 +116,21 @@ This project includes Claude commands that automate the challenge workflow.
 | `/generate-next-challenge` | Reads README.md, detects the next incomplete day, and generates `instructions.md` + `usage_examples.md` |
 | `/implement-challenge` | Implements the latest generated challenge, runs tests, and marks it as ✅ DONE in README.md if they pass |
 
+## Skills
+
+Skills are reusable building blocks that Claude invokes automatically during every challenge implementation.
+
+| Skill | Trigger | Description |
+|---|---|---|
+| `project-scaffold` | Every `/implement-challenge` invocation — no exceptions | Generates `constants.py`, `cli_parser.py`, `llm_client.py`, and `main.py` base structure with an `LLMClient.ask()` backed by `httpx` (sync). All static values live in `constants.py` only. |
+
 ## Workflow
 
 ```
 /generate-next-challenge
        ↓
 /implement-challenge
+  (auto-invokes skills when applicable)
 ```
 
 Each command is context-aware: it reads README.md to detect which day to act on and enforces the project's tech stack and scope rules automatically.
@@ -148,7 +157,7 @@ Each command is context-aware: it reads README.md to detect which day to act on 
 - Python Focus: asyncio, concurrency
 - AI Focus: Parallel prompt execution
 
-### Day 5 – CLI AI Assistant
+### Day 5 – CLI AI Assistant ✅ DONE
 - Python Focus: argparse or typer
 - AI Focus: Basic prompt interaction
 
