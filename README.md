@@ -144,7 +144,7 @@ Each command is context-aware: it reads README.md to detect which day to act on 
 - Python Focus: Pydantic models
 - AI Focus: JSON output validation
 
-### Day 4 – Async LLM Calls
+### Day 4 – Async LLM Calls ✅ DONE
 - Python Focus: asyncio, concurrency
 - AI Focus: Parallel prompt execution
 
