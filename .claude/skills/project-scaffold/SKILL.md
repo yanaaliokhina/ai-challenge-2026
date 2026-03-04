@@ -18,7 +18,7 @@ Use this skill for **every new challenge implementation** — no exceptions:
 
 1. Identify the day number N. If not provided, ask for it.
 2. Create `day-{N}/src/` if it does not exist.
-3. Write exactly the four files below — no additions, no deviations.
+3. Review instructions for the implemented challenge and write the files below if they are needed.
 
 ---
 

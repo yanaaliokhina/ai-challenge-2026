@@ -161,7 +161,7 @@ Each command is context-aware: it reads README.md to detect which day to act on 
 - Python Focus: argparse or typer
 - AI Focus: Basic prompt interaction
 
-### Day 6 – Token Counter Utility
+### Day 6 – Token Counter Utility ✅ DONE
 - Python Focus: Utility functions
 - AI Focus: Token estimation
 
