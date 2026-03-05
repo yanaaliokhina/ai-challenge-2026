@@ -165,7 +165,7 @@ Each command is context-aware: it reads README.md to detect which day to act on 
 - Python Focus: Utility functions
 - AI Focus: Token estimation
 
-### Day 7 – Prompt Experiment Script
+### Day 7 – Prompt Experiment Script ✅ DONE
 - Python Focus: File I/O
 - AI Focus: Compare prompt variations
 
