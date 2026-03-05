@@ -171,7 +171,7 @@ Each command is context-aware: it reads README.md to detect which day to act on 
 
 ## Week 2 – Embeddings & RAG Fundamentals
 
-### Day 8 – Generate Text Embeddings
+### Day 8 – Generate Text Embeddings ✅ DONE
 - Python Focus: Typed functions
 - AI Focus: Embedding API usage
 
