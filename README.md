@@ -178,6 +178,7 @@ Each command is context-aware: it reads README.md to detect which day to act on 
 ### Day 9 – Cosine Similarity Search
 - Python Focus: numpy basics
 - AI Focus: Similarity comparison
+- Status: ✅ DONE
 
 ### Day 10 – Mini RAG Script
 - Python Focus: Text chunking
