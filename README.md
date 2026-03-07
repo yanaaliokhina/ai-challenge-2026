@@ -180,7 +180,7 @@ Each command is context-aware: it reads README.md to detect which day to act on 
 - AI Focus: Similarity comparison
 - Status: ✅ DONE
 
-### Day 10 – Mini RAG Script
+### Day 10 – Mini RAG Script ✅ DONE
 - Python Focus: Text chunking
 - AI Focus: Retrieval-Augmented Generation
 

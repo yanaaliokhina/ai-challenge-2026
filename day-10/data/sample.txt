@@ -1,0 +1,19 @@
+Retrieval-Augmented Generation (RAG) is a technique that combines information retrieval with large language model generation. Instead of relying solely on the model's parametric knowledge, RAG retrieves relevant documents from an external corpus and injects them into the prompt as context.
+
+The core idea was introduced by Lewis et al. in their 2020 paper "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks." The key contributors to the original paper include Patrick Lewis, Ethan Perez, Aleksandra Piktus, Fabio Petroni, Vladimir Karpukhin, Naman Goyal, Heinrich Küttler, Mike Lewis, Wen-tau Yih, Tim Rocktäschel, Sebastian Riedel, and Douwe Kiela.
+
+The method works in two stages. First, a retriever encodes the input query and searches a document index for the most relevant passages using dense vector similarity. Second, the generator — typically a sequence-to-sequence model — conditions on both the query and the retrieved passages to produce a final answer.
+
+RAG was evaluated on several knowledge-intensive benchmarks including Natural Questions, TriviaQA, WebQuestions, and CuratedTrec. The model achieved state-of-the-art results on multiple open-domain question answering tasks without requiring task-specific fine-tuning of the retriever.
+
+One key advantage of RAG over purely parametric models is that the external knowledge base can be updated without retraining the model. This makes it particularly useful for domains where information changes frequently, such as news, medicine, or legal documents.
+
+The retriever in the original RAG paper used Dense Passage Retrieval (DPR), a bi-encoder architecture that encodes questions and passages into a shared dense vector space. Retrieval is performed using maximum inner product search over a pre-built FAISS index.
+
+Modern RAG systems often use chunking strategies to break long documents into smaller passages before indexing. Common chunking approaches include fixed-size word chunks with overlap, sentence-level splitting, and semantic chunking based on topic shifts. Overlap between chunks helps preserve context that would otherwise be lost at boundaries.
+
+Evaluation of RAG systems typically involves measuring both retrieval quality (e.g., recall@K) and end-to-end answer quality (e.g., exact match, F1, or ROUGE scores). Retrieval quality directly impacts generation quality — if the relevant passage is not retrieved, the model cannot generate a correct answer regardless of its capabilities.
+
+Practical RAG implementations often use embedding APIs such as OpenAI's text-embedding-3-small or open-source alternatives like sentence-transformers. These models encode both queries and documents into high-dimensional vectors, and cosine similarity is used to rank passages by relevance to the query.
+
+Future directions in RAG research include iterative retrieval, where the model retrieves multiple rounds of documents, and self-reflective RAG, where the model evaluates the quality of retrieved passages before generating an answer. These approaches aim to improve factual accuracy and reduce hallucinations in language model outputs.

@@ -95,8 +95,8 @@ Rules:
 Import rules:
 - A global conftest.py already exists and adds src/ to sys.path — do NOT create another conftest.py
 - NEVER add sys.path.insert in individual test files
-- Import modules directly by name: example `from src.embedding_client import ...`
-- Mock target strings must use the direct module name: example `"src.embedding_client.httpx.post"`
+- Import modules directly by name: `from embedding_client import ...` NOT `from src.embedding_client import ...`
+- Mock target strings must use the direct module name: `"embedding_client.httpx.post"` NOT `"src.embedding_client.httpx.post"`
 
 ----------------------------------
 STEP 5 — Create or Update usage_examples.md
