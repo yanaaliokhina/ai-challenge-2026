@@ -1,0 +1,17 @@
+Attention Is All You Need: A Summary
+
+The transformer architecture was introduced by Vaswani et al. in the 2017 paper "Attention Is All You Need." The key contributors include Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Lukasz Kaiser, and Illia Polosukhin, all affiliated with Google Brain and Google Research at the time of publication.
+
+The central claim of the paper is that recurrence and convolution are not necessary for achieving state-of-the-art performance on sequence-to-sequence tasks. Instead, the authors propose relying entirely on attention mechanisms to draw global dependencies between input and output.
+
+The transformer model consists of an encoder and a decoder, each made up of stacked identical layers. The encoder maps an input sequence of symbol representations to a sequence of continuous representations. The decoder then generates an output sequence one element at a time, attending to the encoder output at each step.
+
+The core method is scaled dot-product attention. Given queries, keys, and values — all represented as matrices — attention is computed as a weighted sum of the values, where the weight assigned to each value is determined by the compatibility of the query with the corresponding key. Scaling by the square root of the key dimension prevents the dot products from growing too large and pushing the softmax into regions with very small gradients.
+
+Multi-head attention extends this idea by running several attention operations in parallel, each with different learned projections of the queries, keys, and values. The outputs of all heads are concatenated and projected again. This allows the model to jointly attend to information from different representation subspaces at different positions.
+
+Positional encoding is used to inject information about the order of tokens in the sequence, since the model contains no recurrence or convolution. The authors use sine and cosine functions of different frequencies to generate positional encodings, which are added directly to the input embeddings.
+
+The transformer was evaluated on English-to-German and English-to-French translation tasks from the WMT 2014 benchmarks. On English-to-German, the model achieved 28.4 BLEU, outperforming all previously published models, including ensembles. On English-to-French, it achieved 41.0 BLEU, also setting a new state-of-the-art at a fraction of the training cost of prior models.
+
+The authors conclude that attention-only architectures are not only competitive with recurrent and convolutional models but superior in quality and significantly more parallelizable, leading to much shorter training times. The transformer has since become the dominant architecture for natural language processing and has been extended to vision, audio, and multimodal tasks.

@@ -184,7 +184,7 @@ Each command is context-aware: it reads README.md to detect which day to act on 
 - Python Focus: Text chunking
 - AI Focus: Retrieval-Augmented Generation
 
-### Day 11 – Local Document Q&A
+### Day 11 – Local Document Q&A ✅ DONE
 - Python Focus: File parsing
 - AI Focus: Context injection
 
