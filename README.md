@@ -188,7 +188,7 @@ Each command is context-aware: it reads README.md to detect which day to act on 
 - Python Focus: File parsing
 - AI Focus: Context injection
 
-### Day 12 – Embedding Index Storage
+### Day 12 – Embedding Index Storage ✅ DONE
 - Python Focus: JSON storage
 - AI Focus: Vector persistence
 

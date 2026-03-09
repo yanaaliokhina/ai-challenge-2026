@@ -1,0 +1,10 @@
+Embeddings are dense vector representations of text produced by neural networks.
+They capture semantic meaning so that similar texts are close together in vector space.
+Cosine similarity measures the angle between two vectors and is commonly used for semantic search.
+Retrieval-Augmented Generation (RAG) combines a retrieval step with a language model generation step.
+In RAG, relevant documents are fetched from an index and injected into the model prompt as context.
+Vector databases store embeddings and support fast approximate nearest-neighbor search at scale.
+Chunking is the process of splitting large documents into smaller pieces before embedding.
+Each chunk should be semantically coherent to produce useful embeddings for retrieval.
+JSON is a lightweight format for persisting structured data such as an embedding index.
+Persistent indexes allow retrieval systems to avoid re-embedding content on every run.
