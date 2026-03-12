@@ -196,7 +196,7 @@ Each command is context-aware: it reads README.md to detect which day to act on 
 - Python Focus: CLI design
 - AI Focus: Query-to-vector retrieval
 
-### Day 14 – Memory Buffer for Chat
+### Day 14 – Memory Buffer for Chat ✅ DONE
 - Python Focus: State management
 - AI Focus: Conversation memory basics
 
