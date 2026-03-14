@@ -202,7 +202,7 @@ Each command is context-aware: it reads README.md to detect which day to act on 
 
 ## Week 3 – Agents & Tool Usage Basics
 
-### Day 15 – Basic Agent Loop
+### Day 15 – Basic Agent Loop ✅ DONE
 - Python Focus: Clean control flow
 - AI Focus: Reasoning loop
 
