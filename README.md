@@ -206,7 +206,7 @@ Each command is context-aware: it reads README.md to detect which day to act on 
 - Python Focus: Clean control flow
 - AI Focus: Reasoning loop
 
-### Day 16 – Tool Registry Pattern
+### Day 16 – Tool Registry Pattern ✅ DONE
 - Python Focus: Decorators
 - AI Focus: Tool-calling mechanism
 
